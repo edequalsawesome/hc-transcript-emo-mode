@@ -1,0 +1,167 @@
+:root {
+    /* primary colors */
+    --transcript-primary-bg: #333333;
+    --transcript-primary-text: #c0c0c0;
+    --transcript-current-chat-bg: #111111;
+    --transcript-primary-link-color: #7fdbff;
+
+    /* chat bubbles */
+    --transcript-message-bg-operator: #3f51b5;
+    --transcript-message-text-operator: rgba(255, 255, 255, 0.56);
+    --transcript-message-bg-user: #555555;
+    --transcript-message-text-user: rgba(255, 255, 255, 0.56);
+
+    /* transcript elements */
+    --transcript-event-bg: rgba(190, 205, 233, 0.18);
+    --transcript-note-bg: #333333;
+
+    /* element colors */
+    --transcript-button-color: #3f51b5;
+}
+
+/* set color of admin bar */
+#wpadminbar {
+    background: #000000;
+}
+
+/* fix height of closed notes box */
+.chat-transcript #page-notes.closed {
+    height: 75px;
+}
+
+/* reduce spacing between note box and transcript */
+.chat-transcript .hapdash-chat-content {
+    margin-top: 100px;
+}
+
+/* set text color for transcript and headings */
+#hapdash-wrapper,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--transcript-primary-text);
+}
+
+/* set color of links on page */
+a {
+    color: var(--transcript-primary-link-color);
+}
+
+/* buttons */
+input[type="submit"] {
+    background: var(--transcript-button-color);
+    color: var(--transcript-primary-text);
+    ;
+    border: 1px inset rgba(190, 205, 233, 0.18);
+    box-shadow: inset 0 1px 0 rgba(190, 205, 233, 0.18), 0 1px 0 rgba(0, 0, 0, 0.08);
+}
+
+/* set background color and text for notes at the top of the transcript */
+.mc-postbox#page-notes,
+.mc-postbox#page-notes.closed,
+.mc-postbox#page-notes .editable-area {
+    background: var(--transcript-current-chat-bg);
+    color: var(--transcript-primary-text);
+    border-color: var(--transcript-primary-bg);
+}
+
+/* set background color of the primary elements of the page*/
+#hapdash-wrapper,
+#hapdash-header,
+.footer,
+#lovedby {
+    background: var(--transcript-primary-bg);
+}
+
+/* set background color and text color of cards for transcript */
+.hapdash-chat-transcript,
+.hapdash-card {
+    background: var(--transcript-current-chat-bg);
+    color: var(--transcript-primary-text);
+}
+
+/* set font used for operator name in sidebar information */
+.hapdash-chat-person .person-name {
+    font: 400 14px/1.5 "Merriweather", "Georgia", "Times New Roman", "Times", serif;
+}
+
+/* set color of senff's copy transcript buttons */
+a[class*='copy-transcript-'] {
+    background: var(--transcript-button-color) !important;
+    text-shadow: none !important;
+    color: var(--transcript-primary-text) !important;
+    text-transform: lowercase;
+    font: 400 14px/1.5 "Merriweather", "Georgia", "Times New Roman", "Times", serif !important;
+}
+
+/* set background for happychat tags */
+.hapdash-chat .hapdash-chat-tags .tag {
+    background: rgba(190, 205, 233, 0.18);
+    border-color: rgba(190, 205, 233, 0.18);
+}
+
+/* adjust styles of active happychat tags */
+.hapdash-chat .hapdash-chat-tags .tag a {
+    color: var(--transcript-primary-text);
+    ;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+/* remove styles from add and delete buttons for happychat tags */
+.hapdash-chat .hapdash-chat-tags .tag .delete a {
+    text-decoration: none;
+    font-weight: normal;
+}
+
+/* -- transcript changes -- */
+/* set color of links in transcript messages */
+.hapdash-chat .hapdash-chat-bubble.type-message.chat-MessageToOperator a,
+.hapdash-chat .hapdash-chat-bubble.type-event a {
+    color: var(--transcript-primary-link-color);
+}
+
+/* border color for cards and card headers */
+.hapdash-card,
+.hapdash-card .hapdash-card-header {
+    border-color: var(--transcript-primary-bg);
+}
+
+/* speech bubble for user */
+.hapdash-chat .hapdash-chat-bubble.type-message.chat-MessageToOperator > div {
+    background: var(--transcript-message-bg-user);
+    color: var(--transcript-message-text-user);
+}
+
+/* speech bubble tail for user */
+.hapdash-chat .hapdash-chat-bubble.type-message > div::before {
+    border-right-color: var(--transcript-message-bg-user) !important;
+    border-bottom-color: var(--transcript-message-bg-user) !important;
+}
+
+/* speech bubble for operator */
+.hapdash-chat .hapdash-chat-bubble.type-message.chat-MessageToVisitor > div {
+    background: var(--transcript-message-bg-operator);
+    color: var(--transcript-message-text-operator);
+}
+
+/* speech bubble tail for operator */
+.hapdash-chat .hapdash-chat-bubble.type-message.chat-MessageToVisitor > div::before {
+    border-left-color: var(--transcript-message-bg-operator) !important;
+    border-bottom-color: var(--transcript-message-bg-operator) !important;
+}
+
+/* event logs */
+.hapdash-chat .hapdash-chat-bubble.type-event {
+    background: var(--transcript-event-bg);
+    border: 1px solid var(--transcript-current-chat-bg);
+}
+
+/* operator notes */
+.hapdash-chat .hapdash-chat-bubble.type-event.HEnote {
+    background: var(--transcript-note-bg);
+    border: 1px inset rgba(190, 205, 233, 0.18);
+}
