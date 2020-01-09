@@ -1,3 +1,12 @@
+/* ==UserStyle==
+@name           Happychat Transcript Emo Mode //_^
+@namespace      github.com/edequalsawesome/hc-emo-mode
+@version        1.0
+@description    Why burn out your damn eyes when you're looking at a transcript from Happychat?
+@author         eD! Thomas
+@updateURL      https://raw.githubusercontent.com/edequalsawesome/hc-transcript-emo-mode/master/hc-transcript-emo-mode.css
+==/UserStyle== */
+
 :root {
     /* primary colors */
     --transcript-primary-bg: #333333;
